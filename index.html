@@ -31,7 +31,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/logonew2020.jpg">
+  <link rel="icon" href="./static/images/favicon.svg">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -68,7 +68,23 @@
                   <span>Read Thesis</span>
                 </a>
               </span>
-              </div>
+              <span class="link-block">
+                <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Watch Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -76,6 +92,47 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        REMI showcases real-time 3D pose visualization from standard video.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4" type="video/mp4">
+          </video>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -116,13 +173,61 @@
           <p>
             The REMI system implements an end-to-end pipeline for real-time movement visualization. It begins by capturing video input from a standard monocular camera. This video stream is then processed to perform 3D human pose estimation and recover 3D body shape parameters in real-time. Finally, the estimated 3D pose and shape are used to render a corresponding 3D human mesh, which is displayed dynamically to provide immediate visual feedback to the user.
           </p>
+          <div class="has-text-centered">
+            <img src="https://placehold.co/600x400/E8E8E8/BDBDBD?text=System+Diagram+Placeholder" alt="REMI System Diagram Placeholder. Replace with actual diagram." style="max-width: 600px; margin-top: 20px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px;">
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Project Demonstration Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/watch?v=MrKrnHhk8IA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Interactive Visualization Example</h2>
 
+        <h3 class="title is-4">Interpolating States (Example)</h3>
+        <div class="content has-text-justified">
+          <p>
+            This interactive example (adapted from the Nerfies project) demonstrates how states can be interpolated. In REMI, this could represent transitioning between different phases of a movement or visualizing subtle adjustments.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Pose</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading... </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Pose</p>
+          </div>
+        </div>
+        <br/>
+        </div>
+    </div>
+  </div>
+</section>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -131,7 +236,7 @@
   title     = {REMI: Visualising Real-time Pose},
   year      = {2025},
   school    = {University of Limerick},
-  note      = {Final Year Project, Department of Computer Science and Information Systems}
+  note      = {Final Year Project, Department of Computer Science and Information Systems, B.Sc. Immersive Software Engineering}
 }</code></pre>
   </div>
 </section>
@@ -142,7 +247,9 @@
          href="./Pose_Driven_MASS_Thesis__FYP___Copy___17_04_ (20).pdf" target="_blank">
         <i class="fas fa-file-pdf"></i> Thesis PDF
       </a>
-      </div>
+      <a class="icon-link" href="https://github.com/google/nerfies" target="_blank"> <i class="fab fa-github"></i> Project Page GitHub
+      </a>
+    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
