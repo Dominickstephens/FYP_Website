@@ -32,8 +32,6 @@ This Final Year Project investigates the effectiveness of real-time, markerless 
 
 For a detailed understanding of the research, methodology, and findings, please refer to the full thesis document:
 
-* **Thesis PDF:** [Pose_Driven_MASS_Thesis__FYP___Copy___17_04_ (20).pdf](./Pose_Driven_MASS_Thesis__FYP___Copy___17_04_ (20).pdf)
-
 ## Website Template Acknowledgement
 
 The project website template was adapted from the [Nerfies project page](https://nerfies.github.io/).
