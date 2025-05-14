@@ -3,7 +3,6 @@
 **REMI** is a system for real-time 3D human pose estimation and dynamic visualization, designed to provide immediate, intuitive feedback on movement quality. This project explores applications in fitness, physiotherapy, and general human movement analysis using standard monocular video.
 
 **Project Page:** [View the Project Showcase](index.html)
-*(Note: For this link to work, the `index.html` file should be in the same directory as this README, or update the path accordingly if hosted online.)*
 
 ## Core Components & Code
 
