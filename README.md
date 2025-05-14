@@ -12,6 +12,8 @@ The REMI system is built upon modified versions of the following key projects:
     * Repository: [https://github.com/Dominickstephens/aitviewer-skel-RT](https://github.com/Dominickstephens/aitviewer-skel-RT)
 * **Ipman (Real-time Pose Estimation):** The modified code used for real-time 3D human pose and shape estimation.
     * Repository: [https://github.com/Dominickstephens/ipman-r-RT](https://github.com/Dominickstephens/ipman-r-RT)
+* **POCO (Real-time Pose Estimation):** The modified code used as a comparison for Ipman for real-time 3D human pose and shape estimation.
+    * Repository: [https://github.com/Dominickstephens/ipman-r-RT](https://github.com/Dominickstephens/POCO_RT)
 
 ## Overview
 
