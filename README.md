@@ -1,4 +1,4 @@
-# REMI: Visualising Real-time Pose
+# REMI: Visualising Real-Time Pose
 
 **REMI** is a system for real-time 3D human pose estimation and dynamic visualization, designed to provide immediate, intuitive feedback on movement quality. This project explores applications in fitness, physiotherapy, and general human movement analysis using standard monocular video.
 
